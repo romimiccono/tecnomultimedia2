@@ -1,5 +1,7 @@
 //Kristyn Hernandez, Romina Miccono, Maria Sol Paloma, Fabiola Veracierta
 //Comisión Lisandro
+//https://youtu.be/tOFggOd0NCA
+
 let numFilas = 25;
 let numColumnas = 25;
 let tamanoCuadro = 20;
