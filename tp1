@@ -1,1 +1,63 @@
+let numFilas = 25;
+let numColumnas = 25;
+let tamanoCuadro = 20;
+let colores = [];
+let tamanoCirculo= 15;
 
+function setup() {
+  createCanvas(400, 400);
+  // Inicializa el arreglo de colores con colores blancos y negros
+  for (let i = 0; i < numFilas; i++) {
+    colores[i] = [];
+    for (let j = 0; j < numColumnas; j++) {
+      if ((i + j) % 2 == 0) {
+        colores[i][j] = [0, 0, 0]; // Negro
+      } else {
+        colores[i][j] = [0, 0, 0]; // Negro
+      }
+    }
+  }
+}
+
+function draw() {
+  background(220);
+  // Dibuja los cuadrados con los colores del arreglo
+  
+  for (let i = 0; i < numFilas; i++) {
+    for (let j = 0; j < numColumnas; j++) {
+      fill(colores[i][j]);
+      rect(j * tamanoCuadro, i * tamanoCuadro, tamanoCuadro, tamanoCuadro);
+      //fill (0);
+      //circle (0+i*20-10, 0+j*20-10, 15);
+    }
+  }
+  
+  for (let i = 0; i < numFilas; i++) {
+    for (let j = 0; j < numColumnas; j++) {
+      fill (0);
+      circle (0+i*20-10, 0+j*20-10, tamanoCirculo);
+    }
+  }
+   //rojo
+  fill(255,0,0,128);
+  rect(20,30,150,180);
+  noStroke();
+   //verde
+  fill(0,255,0,128);
+  rect(120,180,200,180);
+  noStroke();
+     //AZUL
+    fill(0,0,255,128);
+    rect(170,50,200,180);
+    noStroke();
+}
+
+function mouseClicked() {
+  // Cambia los colores de los cuadrados a colores aleatorios
+  for (let i = 0; i < numFilas; i++) {
+    for (let j = 0; j < numColumnas; j++) {
+      colores[i][j] = [random(200), random(25), random(200)];
+    }
+  }
+  tamanoCirculo=random(5,15);
+}
