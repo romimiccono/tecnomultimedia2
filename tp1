@@ -1,3 +1,5 @@
+//Kristyn Hernandez, Romina Miccono, Maria Sol Paloma, Fabiola Veracierta
+//Comisión Lisandro
 let numFilas = 25;
 let numColumnas = 25;
 let tamanoCuadro = 20;
